@@ -1,9 +1,19 @@
 <app-header></app-header>
-<main class="w-full flex items-center justify-center">
+<main class="w-full flex flex-col items-center justify-center">
   <section class="w-9/12 h-32 flex justify-end border-b-2 flex flex-col mt-4">
     <p class="text-5xl font-bold mb-4">Recent</p>
     <p class="text-lg mb-2 tracking-wider" style="color: var(--text-gray)">
       What I've been talking about
     </p>
   </section>
+  <div class="w-9/12 flex mt-4">
+    <div class="w-1/5 h-36 p-6">
+      <p style="color: var(--text-gray)">Mar 25, 2022</p>
+    </div>
+    <div class="w-4/5 h-36 p-6">
+      <p class="text-2xl font-bold cursor-pointer" routerLink="hello-world">Hello World</p>
+      <p class="mt-1 cursor-pointer" style="color: var(--text-anchor)">TAG</p>
+      <p class="mt-2"style="color: var(--text-gray)">Just my first post here.</p>
+    </div>
+  </div>
 </main>

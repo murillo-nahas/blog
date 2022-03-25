@@ -1,0 +1,36 @@
+<header class="w-full flex items-center justify-center mt-2">
+  <nav class="w-9/12 h-20 flex items-center justify-between">
+    <p class="text-3xl font-semibold cursor-pointer" routerLink="/">Nahas</p>
+    <div class="flex">
+      <a routerLink="/blog" class="mr-7 text-lg">Posts</a>
+      <a routerLink="/tags" class="mr-7 text-lg">Tags</a>
+      <a routerLink="/projects" class="mr-7 text-lg">Projects</a>
+      <a routerLink="/about" class="mr-7 text-lg">About</a>
+      <img
+        src="/assets/images/night-mode.png"
+        alt="Light Mode Icon"
+        class="w-5 h-5 cursor-pointer"
+      />
+    </div>
+  </nav>
+</header>
+
+<main class="w-full flex flex-col items-center justify-center">
+  <section class="w-9/12 h-32 flex flex-col items-start">
+    <p class="text-5xl font-bold mt-12">Posts</p>
+    <input type="text" class="mt-2 w-64 h-20 rounded-lg border-2 p-2 outline-none cursor-pointer" placeholder="Search...">
+    <div class="w-full border-b-2 mt-4"></div>
+
+    <div class="w-full flex">
+      <div class="w-1/5 h-36 p-6">
+        <p style="color: var(--text-gray)">Mar 25, 2022</p>
+      </div>
+      <div class="w-4/5 h-36 p-6">
+        <p class="text-2xl font-bold cursor-pointer" routerLink="hello-world">Hello World</p>
+        <p class="mt-1 cursor-pointer" style="color: var(--text-anchor)">TAG</p>
+        <p class="mt-2"style="color: var(--text-gray)">Just my first post here.</p>
+      </div>
+    </div>
+  </section>
+  
+</main>
