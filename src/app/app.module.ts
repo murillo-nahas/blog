@@ -13,16 +13,19 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeComponent,
     TagsComponent,
     AboutComponent,
     ProjectsComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+  ],
+  exports: [
+    HeaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
