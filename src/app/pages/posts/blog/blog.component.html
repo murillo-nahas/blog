@@ -15,21 +15,21 @@
   </nav>
 </header>
 <main class="w-full flex flex-col items-center justify-center">
-  <section class="w-9/12 h-32 flex flex-col items-start">
-    <p class="text-5xl font-bold mt-12">Posts</p>
-    <input type="text" class="mt-2 w-64 h-20 rounded-lg border-2 p-2 outline-none cursor-pointer" placeholder="Search...">
-    <div class="w-full border-b-2 mt-4"></div>
-
-    <div class="w-full flex">
-      <div class="w-1/5 h-36 mt-12">
-        <p style="color: var(--text-gray)">Mar 25, 2022</p>
-      </div>
-      <div class="w-4/5 h-36 mt-12">
-        <p class="text-2xl font-bold cursor-pointer" routerLink="hello-world">Hello World</p>
-        <p class="cursor-pointer" style="color: var(--text-anchor)">TAG</p>
-        <p class="mt-3" style="color: var(--text-gray)">A short presentation about me.</p>
-        <p class="mt-3 cursor-pointer" style="color: var(--text-anchor)" routerLink="hello-world">READ →</p>
-      </div>
+  <section class="w-9/12 h-32 flex flex-col items-start border-b-2">
+    <h1 class="text-5xl font-bold mt-12">Posts</h1>
+  </section>
+  <section class="w-9/12 flex">
+    <div class="w-1/5 h-36 mt-12">
+      <p style="color: var(--text-gray)">Mar 25, 2022</p>
+    </div>
+    <div class="w-4/5 h-36 mt-12">
+      <p class="text-2xl font-bold cursor-pointer" routerLink="hello-world">
+        Hello World
+      </p>
+      <p class="cursor-pointer" routerLink="/blog/personal" style="color: var(--text-anchor)">PERSONAL</p>
+      <p class="mt-3" style="color: var(--text-gray)">
+        How was my first contact with programming?
+      </p>
     </div>
   </section>
 </main>

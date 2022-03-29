@@ -1,6 +1,14 @@
 <app-header></app-header>
-<main class="w-full flex items-center justify-center">
+<main class="w-full flex flex-col items-center justify-center">
     <section class="w-9/12 h-32 flex items-end border-b-2">
-        <p class="text-5xl font-bold mb-9">Tags</p>
+        <h1 class="text-5xl font-bold mb-9">Tags</h1>
+    </section>
+    <section class="mt-40">
+        <a routerLink="/tech" class="hover" style="color: var(--text-anchor);">TECH
+            <span>(0)</span>
+        </a>
+        <a routerLink="/blog/personal" class="ml-4" style="color: var(--text-anchor);">PERSONAL LIFE
+            <span>(1)</span>
+        </a>
     </section>
 </main>

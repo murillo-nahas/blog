@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hello-world',
   templateUrl: './hello-world.component.html',
   styleUrls: ['./hello-world.component.scss']
 })
-export class HelloWorldComponent implements OnInit {
+export class HelloWorldComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  redirectTwitter(): void {
+    window.open("https://twitter.com/murillonahvs");
   }
 
 }

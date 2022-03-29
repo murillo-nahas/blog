@@ -1,23 +1,72 @@
 <header class="w-full flex items-center justify-center mt-2">
-    <nav class="w-9/12 h-20 flex items-center justify-between">
-      <p class="text-3xl font-semibold cursor-pointer" routerLink="/">Nahas</p>
-      <div class="flex">
-        <a routerLink="/blog" class="mr-7 text-lg">Posts</a>
-        <a routerLink="/tags" class="mr-7 text-lg">Tags</a>
-        <a routerLink="/projects" class="mr-7 text-lg">Projects</a>
-        <a routerLink="/about" class="mr-7 text-lg">About</a>
-        <img
-          src="/assets/images/night-mode.png"
-          alt="Light Mode Icon"
-          class="w-5 h-5 cursor-pointer"
-        />
-      </div>
-    </nav>
+  <nav class="w-9/12 h-20 flex items-center justify-between">
+    <p class="text-3xl font-semibold cursor-pointer" routerLink="/">Nahas</p>
+    <div class="flex">
+      <a routerLink="/blog" class="mr-7 text-lg">Posts</a>
+      <a routerLink="/tags" class="mr-7 text-lg">Tags</a>
+      <a routerLink="/projects" class="mr-7 text-lg">Projects</a>
+      <a routerLink="/about" class="mr-7 text-lg">About</a>
+      <img
+        src="/assets/images/night-mode.png"
+        alt="Light Mode Icon"
+        class="w-5 h-5 cursor-pointer"
+      />
+    </div>
+  </nav>
 </header>
 <main class="w-full flex flex-col items-center justify-center">
-    <section class="w-9/12 h-32 flex flex-col items-center">
-      <p class="text-5xl font-bold mt-12">Hello World</p>
-      <p class="mt-4">Mar 25, 2022</p>
-      <div class="w-full border-b-2 mt-4"></div>
-    </section>
-  </main>
+  <section
+    class="w-9/12 h-32 flex flex-col justify-center items-center border-b-2"
+  >
+    <h1 class="text-5xl font-bold mt-9">Hello World</h1>
+    <p>Mar 25, 2022</p>
+  </section>
+  <section class="mt-16 w-9/12 flex">
+    <div class="w-1/4 h-screen flex flex-col">
+      <div class="flex">
+        <img
+          src="/assets/images/photo.jpg"
+          alt="Icon Photo"
+          class="w-12 h-12 rounded-full"
+          title="My icon photo"
+        />
+        <div class="ml-2">
+          <p>Murillo Nahás</p>
+          <p
+            class="text-sm cursor-pointer"
+            style="color: var(--text-anchor)"
+            (click)="redirectTwitter()"
+          >
+            @murillonahvs
+          </p>
+        </div>
+      </div>
+      <div class="border-b-2 mt-4 w-3/4"></div>
+      <div class="mt-10">
+        <p class="text-sm">TAGS</p>
+        <p routerLink="/blog/personal"  class="text-sm cursor-pointer" style="color: var(--text-anchor);">PERSONAL LIFE</p>
+      </div>
+      <div class="border-b-2 mt-4 w-3/4"></div>
+      <div class="mt-10">
+        <p class="text-sm cursor-pointer" routerLink="/blog" style="color: var(--text-anchor);">RETURN TO BLOG</p>
+      </div>
+    </div>
+    <div class="w-3/4 mb-36 h-screen flex flex-col">
+      <img src="/assets/images/hello-world.jpg" class="rounded-lg" alt="Hello World Photo" loading="lazy">
+      <h1 class="text-2xl font-bold mt-9">Introduction</h1>
+      <p class="mt-4">Hi there! How's going? I hope you're well. Then, allow me to introduce myself, my name is Murillo
+        Nahás, 19yo from Brazil, São Paulo. Nowadays I'm working as a fullstack software engineer at a company of my city
+        with projects focused in logistics automation.
+      </p>
+      <p class="text-2xl font-bold mt-9">What about me?</p>
+      <p class="mt-4">I've been meaning to create this blog for a while and finally decided to gave the final gas to release it.
+        Even being laziness, it only took about a week to create the full scope and a "working" site, not bad, right?
+      </p>
+      <p class="mt-4">
+        Well, let's go. Here I want to show you reader some tech stuff that I know and that I'm learning in this moment, also I want
+        to show some personal things that I face in my life. The tech stuff will be associated mainly about Angular, React,
+        frontend stuffs and some Haskell content, the functional programming language that I've been enjoying lately.  
+      </p>
+    </div>
+  </section>
+</main>
