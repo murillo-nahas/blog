@@ -5,6 +5,7 @@ import { BlogComponent } from './pages/posts/blog/blog.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { TagsComponent } from './pages/tags/tags.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path: 'about', component: AboutComponent
+  },
+  {
+    path: 'error-page', component: ErrorPageComponent
   },
   {
     path: '**', redirectTo: 'error-page'
