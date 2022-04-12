@@ -1,3 +1,4 @@
+<app-header></app-header>
 <main class="w-full flex flex-col items-center justify-center">
   <section
     class="w-9/12 h-32 flex flex-col justify-center items-center border-b-2"
@@ -31,11 +32,18 @@
         <p routerLink="/blog/personal"  class="text-sm cursor-pointer" style="color: var(--text-anchor);">PERSONAL LIFE</p>
       </div>
       <div class="border-b-2 mt-4 w-3/4"></div>
+      <div class="mt-10 flex flex-col">
+        <p class="text-sm">SUMMARY</p>
+        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor);" href="#teste">INTRODUCTION</a>
+        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor);">WHAT ABOUT ME?</a>
+        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor);">WORKING ON</a>
+      </div>
+      <div class="border-b-2 mt-4 w-3/4"></div>
       <div class="mt-10">
         <p class="text-sm cursor-pointer" routerLink="/blog" style="color: var(--text-anchor);">RETURN TO BLOG</p>
       </div>
     </div>
-    <div class="w-3/4 mb-36 h-screen flex flex-col">
+    <div class="w-3/4 mb-44 h-screen flex flex-col">
       <img src="/assets/images/hello-world.jpg" class="rounded-lg" alt="Hello World Photo" loading="lazy">
       <h1 class="text-2xl font-bold mt-9">Introduction</h1>
       <p class="mt-4">Hi there! How's going? I hope you're well. Then, allow me to introduce myself, my name is Murillo
@@ -50,6 +58,9 @@
         Well, let's go. Here I want to show you reader some tech stuff that I know and that I'm learning in this moment, also I want
         to show some personal things that I face in my life. The tech stuff will be associated mainly about Angular, React,
         frontend stuffs and some Haskell content, the functional programming language that I've been enjoying lately.  
+      </p>
+      <p class="text-2xl font-bold mt-9">Working on</p>
+      <p class="mt-4">Lately I've been working on some cool side projects. 
       </p>
     </div>
   </section>
