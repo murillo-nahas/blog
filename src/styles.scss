@@ -17,10 +17,7 @@ p, h1, h2, h3, a, strong, span {
     color: var(--text-dark);
 }
 
-
-
 :root {
-    $text-anchor: #1a6fdd;
     --background-light: #fafafa;
     --text-light: #f5f5f5;
     --background-dark: #171717;
@@ -28,4 +25,8 @@ p, h1, h2, h3, a, strong, span {
     --text-gray: #404040;
     --text-anchor: #1a6fdd;
     --text-anchor-hover: #5d6566;
+}
+
+.active {
+    color: var(--text-anchor);
 }
