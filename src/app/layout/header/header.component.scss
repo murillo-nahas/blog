@@ -3,3 +3,9 @@
         color: var(--text-anchor-hover);
     }
 }
+
+@media (max-width: 640px) {
+    .name {
+        display: none;
+    }
+}

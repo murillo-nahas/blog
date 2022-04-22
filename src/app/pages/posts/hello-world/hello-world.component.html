@@ -6,11 +6,11 @@
     <h1 class="text-5xl font-bold mt-9">Hello World</h1>
     <p>Mar 25, 2022</p>
   </section>
-  <section class="mt-16 w-9/12 flex">
-    <div class="w-1/4 h-screen flex flex-col">
-      <div class="flex">
+  <section class="mt-16 w-9/12 flex section-content">
+    <div class="w-1/4 h-screen flex flex-col about-me">
+      <div class="flex remove-margin about-twitter">
         <img
-          src="/assets/images/photo.jpg"
+          src="https://github.com/murillo-nahas.png"
           alt="Icon Photo"
           class="w-12 h-12 rounded-full"
           title="My icon photo"
@@ -26,44 +26,46 @@
           </p>
         </div>
       </div>
-      <div class="border-b-2 mt-4 w-3/4"></div>
-      <div class="mt-10">
+      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
+      <div class="mt-10 remove-margin">
         <p class="text-sm">TAGS</p>
         <p routerLink="/tags/personal-life"  class="text-sm cursor-pointer" style="color: var(--text-anchor);">PERSONAL LIFE</p>
       </div>
-      <div class="border-b-2 mt-4 w-3/4"></div>
-      <div class="mt-10 flex flex-col">
+      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
+      <div class="mt-10 remove-margin flex flex-col">
         <p class="text-sm">SUMMARY</p>
         <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor);">INTRODUCTION</a>
         <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor);">WHAT ABOUT ME?</a>
         <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor);">WORKING ON</a>
       </div>
-      <div class="border-b-2 mt-4 w-3/4"></div>
-      <div class="mt-10">
+      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
+      <div class="mt-10 remove-margin">
         <p class="text-sm cursor-pointer" routerLink="/blog" style="color: var(--text-anchor);">RETURN TO BLOG</p>
       </div>
     </div>
-    <div class="w-3/4 mb-44 h-screen flex flex-col">
+    <div class="w-3/4 mb-44 h-screen flex flex-col content">
       <img src="/assets/images/hello-world.jpg" class="rounded-lg" alt="Hello World Photo" loading="lazy">
       <h1 class="text-2xl font-bold mt-9">Introduction</h1>
-      <p class="mt-4">Hi there! How's going? I hope you're well. Then, allow me to introduce myself, my name is Murillo
-        Nahás, 19yo from Brazil, São Paulo. Nowadays I'm working as a fullstack software engineer at a company of my city
-        with projects focused in logistics automation.
+      <p class="mt-4">
+        Hi there! How is it going? I hope you guys are well. Then, allow me to introduce myself, my name is Murillo Nahás,
+        19 years old Fullstack Software Engineer from Brazil, São Paulo. Currently, I am working as a Fullstack Software
+        Engineer at a company of my city with some projects focused in logistic automation.
       </p>
       <p class="text-2xl font-bold mt-9">What about me?</p>
-      <p class="mt-4">I've been meaning to create this blog for a while and finally decided to gave the final gas to release it.
-        Even being laziness, it only took about a week to create the full scope and a "working" site, not bad, right?
+      <p class="mt-4">I have been meaning to create this blog for a while and finally decided to gave the final gas to release
+        it for you guys. Even being lazy, it only took about a week to create a working website, not bad, right?
       </p>
-      <p class="mt-4">
-        Well, let's go. Here I want to show you reader some tech stuff that I know and that I'm learning in this moment, also I want
-        to show some personal things that I face in my life. The tech stuff will be associated mainly about Angular, React,
-        frontend stuffs and some Haskell content, the functional programming language that I've been enjoying lately.  
+      <p class="mt-4"> 
+        Here I want to show you reader some tech stuffs that I know and I am learning right now, also, I want to show some personal
+        stuffs that I face everyday in my life. The tech stuff will be associated mainly about Angular, Typescript/Javascript and
+        other things, like Haskell that I am interested, or some C# stuffs. (I actually don't know what I want to share 🤨).
       </p>
       <p class="text-2xl font-bold mt-9">Working on</p>
-      <p class="mt-4">Lately I've been working on some cool side projects. 
+      <p class="mt-4">Lately I have been working on some cool side projects. Like this blog where I share some stuffs and on
+        a startup project idea where me and other two friends are developing a SaaS (can't tell more about for a while 😬) and
+        finally release it this year. 
       </p>
-      <markdown [src]="'./assets/blog/blog.md'"></markdown>
+      <div class="mt-9">&nbsp;</div>
     </div>
-    
   </section>
 </main>
