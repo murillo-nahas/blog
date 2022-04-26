@@ -8,7 +8,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { LayoutModule } from './layout/layout.module';
-import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { MarkdownModule } from 'ngx-markdown';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule,
-    MarkdownModule.forRoot()
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

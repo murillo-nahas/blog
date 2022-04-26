@@ -27,9 +27,18 @@
         >About</a
       >
       <img
+        *ngIf="darkMode"
         src="/assets/images/night-mode.png"
         alt="Light Mode Icon"
         class="w-5 h-5 cursor-pointer"
+        (click)="changeIcon()"
+      />
+      <img
+        *ngIf="!darkMode"
+        src="/assets/images/brightness.png"
+        alt="Light Mode Icon"
+        class="w-5 h-5 cursor-pointer"
+        (click)="changeIcon()"
       />
     </div>
   </nav>

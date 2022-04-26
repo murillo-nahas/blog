@@ -11,4 +11,10 @@ export class HelloWorldComponent {
     window.open("https://twitter.com/murillonahvs");
   }
 
+  onlyReading: boolean = true;
+
+  clickReading(): void {
+    this.onlyReading = !this.onlyReading;
+  }
+
 }

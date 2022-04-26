@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  darkMode: boolean = true;
+
+  changeIcon(): void {
+    this.darkMode = !this.darkMode;
+  }
 }

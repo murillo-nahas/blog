@@ -3,8 +3,7 @@ import { BlogComponent } from './blog/blog.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { LayoutModule } from 'src/app/layout/layout.module';
-import { CommonModule } from '@angular/common';
-import { MarkdownModule } from 'ngx-markdown';
+import { CommonModule } from '@angular/common'
 
 export const routes: Routes = [
   { path: '', component: BlogComponent },
@@ -16,8 +15,7 @@ export const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    LayoutModule,
-    MarkdownModule.forChild()
+    LayoutModule
   ]
 })
 export class PostsModule { }
