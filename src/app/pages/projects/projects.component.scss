@@ -1,6 +1,6 @@
 .card {
-  background-color: var(--text-light);
   width: 22rem;
+  background-color: var(--text-light);
 }
 
 .projects {
@@ -11,14 +11,7 @@
   .projects {
     flex-direction: column;
   }
-  .portfolio {
-    margin-left: 0;
-  }
 }
-
-// .portfolio {
-//   margin-left: 2rem;
-// }
 
 .hover {
   color: var(--text-gray);
