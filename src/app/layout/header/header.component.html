@@ -1,6 +1,8 @@
 <header class="w-full flex flex-wrap items-center justify-center mt-2">
   <nav class="w-9/12 h-20 flex flex-wrap items-center justify-between">
-    <p class="text-3xl font-semibold cursor-pointer name" routerLink="/">Nahas</p>
+    <p class="text-3xl font-semibold cursor-pointer name hover" routerLink="/">
+      Nahas
+    </p>
     <div class="flex">
       <a
         routerLink="/blog"
@@ -26,20 +28,6 @@
         class="mr-7 text-lg cursor-pointer"
         >About</a
       >
-      <img
-        *ngIf="darkMode"
-        src="/assets/images/night-mode.png"
-        alt="Light Mode Icon"
-        class="w-5 h-5 cursor-pointer"
-        (click)="changeIcon()"
-      />
-      <img
-        *ngIf="!darkMode"
-        src="/assets/images/brightness.png"
-        alt="Light Mode Icon"
-        class="w-5 h-5 cursor-pointer"
-        (click)="changeIcon()"
-      />
     </div>
   </nav>
 </header>

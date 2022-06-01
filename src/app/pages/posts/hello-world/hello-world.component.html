@@ -1,4 +1,5 @@
 <app-header *ngIf="onlyReading"></app-header>
+
 <main class="w-full flex flex-col items-center justify-center">
   <section
     class="w-9/12 h-32 flex flex-col justify-center items-center border-b-2"
@@ -7,6 +8,7 @@
     <h1 class="text-5xl font-bold mt-9">Hello World</h1>
     <p>Mar 25, 2022</p>
   </section>
+
   <section class="mt-16 w-9/12 flex section-content">
     <div class="w-1/4 h-screen flex flex-col about-me" *ngIf="onlyReading">
       <div class="flex remove-margin about-twitter">
@@ -18,59 +20,32 @@
         />
         <div class="ml-2">
           <p>Murillo Nahás</p>
-          <p
-            class="text-sm cursor-pointer"
-            style="color: var(--text-anchor)"
-            (click)="redirectTwitter()"
-          >
+          <p class="text-sm cursor-pointer hover" (click)="redirectTwitter()">
             @murillonahvs
           </p>
         </div>
       </div>
       <div class="border-b-2 mt-4 w-3/4 change-border"></div>
-      <div class="mt-10 remove-margin">
+      <div class="mt-6 remove-margin">
         <p class="text-sm">TAGS</p>
         <p
           routerLink="/tags/personal-life"
-          class="text-sm cursor-pointer"
-          style="color: var(--text-anchor)"
+          class="text-sm cursor-pointer hover mt-2"
         >
           PERSONAL LIFE
         </p>
       </div>
-      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
-      <div class="mt-10 remove-margin flex flex-col">
-        <p class="text-sm">SUMMARY</p>
-        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor)"
-          >INTRODUCTION</a
-        >
-        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor)"
-          >WHAT ABOUT ME?</a
-        >
-        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor)"
-          >WORKING ON</a
-        >
-      </div>
-      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
-      <div class="mt-10 remove-margin flex flex-col">
+
+      <div class="border-b-2 mt-2 w-3/4 change-border"></div>
+      <div class="mt-6 remove-margin">
         <p class="text-sm">READ</p>
-        <a class="text-sm cursor-pointer mt-2" style="color: var(--text-anchor)"
-          >2 MIN READ</a
-        >
-        <a
-          class="text-sm cursor-pointer mt-2"
-          style="color: var(--text-anchor)"
-          (click)="clickReading()"
+        <a class="text-sm cursor-pointer mt-2 hover" (click)="clickReading()"
           >ONLY READING</a
         >
       </div>
       <div class="border-b-2 mt-4 w-3/4 change-border"></div>
       <div class="mt-10 remove-margin">
-        <p
-          class="text-sm cursor-pointer"
-          routerLink="/blog"
-          style="color: var(--text-anchor)"
-        >
+        <p class="text-sm cursor-pointer hover" routerLink="/blog">
           RETURN TO BLOG
         </p>
       </div>
@@ -82,10 +57,11 @@
     >
       <div class="mb-10 remove-margin flex flex-col mr-10" *ngIf="!onlyReading">
         <button
-          class="text-sm cursor-pointer mt-2"
-          style="color: var(--text-anchor)"
+          class="text-sm cursor-pointer mt-2 hover"
           (click)="clickReading()"
-        >RETURN ALL CONTENT</button>
+        >
+          RETURN ALL CONTENT
+        </button>
       </div>
       <img
         src="/assets/images/hello-world.jpg"

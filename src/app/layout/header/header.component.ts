@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  darkMode: boolean = true;
+  // darkMode: boolean = true;
 
-  changeIcon(): void {
-    this.darkMode = !this.darkMode;
-  }
+  // changeIcon(): void {
+  //   this.darkMode = !this.darkMode;
+  // }
 }

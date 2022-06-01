@@ -4,6 +4,10 @@
     }
 }
 
+.hover:hover {
+  color: var(--text-gray)
+}
+
 @media (max-width: 640px) {
     .name {
         display: none;
