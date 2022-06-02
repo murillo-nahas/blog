@@ -1,0 +1,174 @@
+<app-header *ngIf="onlyReading"></app-header>
+
+<main class="w-full flex flex-col items-center justify-center">
+  <section
+    class="w-9/12 h-32 flex flex-col justify-center items-center border-b-2"
+    *ngIf="onlyReading"
+  >
+    <h1 class="text-5xl font-bold mt-9">Simples Angular Boilerplate</h1>
+    <p class="mt-2">2 de Junho, 2022</p>
+  </section>
+
+  <section class="mt-16 w-9/12 flex section-content">
+    <div class="w-1/4 h-screen flex flex-col about-me" *ngIf="onlyReading">
+      <div class="flex remove-margin about-twitter">
+        <img
+          src="https://github.com/murillo-nahas.png"
+          alt="Icon Photo"
+          class="w-12 h-12 rounded-full"
+          title="My icon photo"
+        />
+        <div class="ml-2">
+          <p>Murillo Nahás</p>
+          <p class="text-sm cursor-pointer hover" (click)="redirectTwitter()">
+            @murillonahvs
+          </p>
+        </div>
+      </div>
+      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
+      <div class="mt-6 remove-margin">
+        <p class="text-sm">TAGS</p>
+        <p routerLink="/tags/tech" class="text-sm cursor-pointer hover mt-2">
+          TECH
+        </p>
+      </div>
+
+      <div class="border-b-2 mt-2 w-3/4 change-border"></div>
+      <div class="mt-6 remove-margin">
+        <p class="text-sm">LEITURA</p>
+        <a class="text-sm cursor-pointer mt-2 hover" (click)="clickReading()"
+          >APENAS LEITURA</a
+        >
+      </div>
+      <div class="border-b-2 mt-4 w-3/4 change-border"></div>
+      <div class="mt-10 remove-margin">
+        <p class="text-sm cursor-pointer hover" routerLink="/blog">
+          RETORNAR AO BLOG
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="w-3/4 mb-44 h-screen flex flex-col content"
+      [ngClass]="{ marginAuto: !onlyReading }"
+    >
+      <div class="mb-10 remove-margin flex flex-col mr-10" *ngIf="!onlyReading">
+        <button
+          class="text-sm cursor-pointer mt-2 hover"
+          (click)="clickReading()"
+        >
+          RETURN ALL CONTENT
+        </button>
+      </div>
+      <img
+        src="/assets/images/angular-boilerplate.png"
+        class="rounded-lg"
+        alt="Hello World Photo"
+        loading="lazy"
+      />
+      <h1 class="text-2xl font-bold mt-9">Introdução</h1>
+      <p class="mt-4">
+        Boa Devs! Como vão? Espero que bem. Bom, nesse post de hoje, gostaria de
+        apresentar para vocês um boilerplate de Angular, ou seja como eu faço as
+        configurações iniciais para meus projetos em Angular e também darei
+        algumas dicas. Sem enrolar muito, vamos começar.
+      </p>
+      <h1 class="text-2xl font-bold mt-9">Criação de Projeto</h1>
+      <p class="mt-4">
+        De início, criaremos um projeto normal utilizando o comando
+        <code>ng new *nome do projeto*</code>
+        e então aceitaremos o roteamento padrão do Angular e o template CSS.
+        Depois disso, seu projeto deverá estar dessa forma:
+      </p>
+      <img
+        src="/assets/images/angular-project.png"
+        class="rounded-lg mt-2"
+        alt="Angular Boilerplate"
+        loading="lazy"
+      />
+      <p class="mt-4">
+        Se está assim, então está tudo certo. Podemos começar entrando na pasta
+        <code>/src/app</code> e começar a modificar alguns arquivos. Estando no
+        diretório, iremos criar uma pasta chamada <code>"pages"</code>, onde
+        colocaremos nossa página home. É a partir desta página que nossa
+        aplicação irá começar. Então, no terminal, certifique-se de estar dentro
+        de <code>/src/app</code> e rode o comando do Angular para criação de
+        componentes: <code>ng generate component home</code>. Isso deve gerar
+        seu componente home e após isso seu projeto deve estar da forma abaixo,
+        se estiver tudo certo!
+      </p>
+      <img
+        src="/assets/images/angular-component.png"
+        class="rounded-lg mt-2"
+        alt="Angular Boilerplate"
+        loading="lazy"
+      />
+      <h1 class="text-2xl font-bold mt-9">
+        Correção de arquivos e definição de rotas
+      </h1>
+      <p class="mt-4">
+        Uma coisa que costumo fazer, como dito acima, é criar uma página home e
+        defini-la como principal página do projeto, além disso, apagar todo o
+        conteúdo de todos os arquivos iniciais. Portanto, vamos lá. Primeiro,
+        iremos apagar todo o conteúdo dentro do arquivo
+        <code>app.component.html</code>, na raiz do projeto, e então, definir
+        uma rota padrão. No mesmo arquivo, preencha o HTML com:
+        <code>{{ defaultRoute }}</code>
+      </p>
+      <p class="mt-4">
+        Agora, precisamos definir nossas rotas para que a aplicação entenda que
+        a página home é a página principal e que sejamos direcionados para lá
+        assim que a aplicação compila. Portanto, no arquivo
+        <code>app-routing.module.ts</code>, iremos definir nossas rotas dentro
+        do array de Rotas, nesse estilo:
+      </p>
+      <img
+        src="/assets/images/angular-routes.png"
+        class="rounded-lg mt-2"
+        alt="Angular Boilerplate"
+        loading="lazy"
+      />
+      <p class="mt-4">
+        Mas o que exatamente esse bloco de código faz? Vamos lá, irei te
+        explicar.
+      </p>
+      <p class="mt-4">
+        Como vemos acima, desde o começo, temos os <code>imports</code> do
+        Angular, que por sua vez importa o <code>NgModule</code>, para sinalizar
+        ao Angular que nosso arquivo atual é um módulo. Abaixo, temos os módulos
+        de rotas, que também são providos pelo próprio Angular e então, temos o
+        import do nosso componente Home.
+      </p>
+      <p class="mt-4">
+        Então, temos nossa constante de rotas, que no caso passa um array de
+        rotas. Exatamente nesse lugar é onde definimos as rotas de nossa
+        aplicação. Veja que temos dois pedaços de código, que definimos as
+        nossas rotas. São eles:
+        <code>{{ redirectRoute }}</code> e <code>{{ route }}</code
+        >. Este bloco de código define uma rota padrão home, que sempre que a
+        URL da nossa aplicação cair em '', será redirecionado para o componente
+        Home. Poderíamos definir outras rotas também, abaixo da última rota home
+        definida. E todas seriam da mesma forma (exceto se estiver utilizando o
+        <code>lazy loading</code>), mas irei deixar isso para outro post.
+      </p>
+      <h1 class="text-2xl font-bold mt-9">Considerações finais</h1>
+      <p class="mt-4">
+        Como vimos acima, criamos um projeto Angular com a definição de uma rota
+        principal, que a partir dela, trabalharemos em nossa aplicação,
+        definindo outras rotas, entre outras coisas. Temos outros assuntos que
+        poderemos abordar futuramente, como a utilização de lazy loading, lint
+        para formatação, entre outros assuntos. Contudo, temos um simples
+        boilerplate criado em Angular para podermos desenvolver. Deixarei um
+        link abaixo com um repositório no GitHub, para quaisquer dúvidas,
+        obrigado!
+        <a
+          href="https://github.com/murillo-nahas/angular-boilerplate"
+          target="_blank"
+          class="hover"
+          >Clique aqui para visitar o repositório</a
+        >
+      </p>
+      <div class="mt-9">&nbsp;</div>
+    </div>
+  </section>
+</main>
